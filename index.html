@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mathumitha M - Portfolio & Resume | B.Tech IT Undergraduate specializing in Digital Marketing, Content Design, and SEO Strategy."
+    />
+    <title>Mathumitha M | Portfolio & Resume</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+          Cantarell, sans-serif;
+      }
+
+      body {
+        background-color: #0b1320;
+        color: #94a3b8;
+        line-height: 1.6;
+        padding: 40px 20px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      /* NAVIGATION / TOP LINKS */
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        color: #94a3b8;
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #38bdf8;
+      }
+
+      /* HERO HEADER */
+      header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      h1 {
+        color: #ffffff;
+        font-size: 3rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        margin-bottom: 20px;
+      }
+
+      .profile-desc {
+        max-width: 780px;
+        margin: 0 auto 30px auto;
+        color: #94a3b8;
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+      }
+
+      .contact-info a,
+      .contact-info span {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .contact-info a:hover {
+        color: #38bdf8;
+        text-decoration: underline;
+      }
+
+      /* SECTION TITLES */
+      .section-title {
+        color: #38bdf8;
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin: 50px 0 20px 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #1e293b;
+        margin-left: 15px;
+      }
+
+      /* CARD STYLES */
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        background: #152136;
+        border: 1px solid #1e293b;
+        border-radius: 12px;
+        padding: 24px;
+        transition:
+          transform 0.2s,
+          border-color 0.2s;
+      }
+
+      .card:hover {
+        border-color: #38bdf8;
+      }
+
+      .card-title {
+        color: #ffffff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .card-meta {
+        color: #38bdf8;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* LIST STYLES FOR TECHNICAL SKILLS */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+
+      .skill-card {
+        background: #152136;
+        border: 1px solid #1e293b;
+        border-radius: 12px;
+        padding: 24px;
+      }
+
+      .skill-card h4 {
+        color: #ffffff;
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+      }
+
+      .skill-card p {
+        font-size: 0.9rem;
+        color: #94a3b8;
+      }
+
+      /* VISUAL PORTFOLIO GRID */
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 24px;
+        margin-top: 20px;
+      }
+
+      .portfolio-card {
+        background: #152136;
+        border-radius: 12px;
+        padding: 20px;
+        border: 1px solid #1e293b;
+      }
+
+      .portfolio-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        background: #0b1320;
+      }
+
+      .portfolio-card h4 {
+        color: #ffffff;
+        font-size: 1.1rem;
+        margin-top: 5px;
+        margin-bottom: 8px;
+      }
+
+      .tag {
+        display: inline-block;
+        background: rgba(56, 189, 248, 0.1);
+        color: #38bdf8;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-right: 6px;
+        margin-bottom: 8px;
+      }
+
+      /* SOFT SKILLS ACCENT BAR */
+      .soft-skill-card {
+        background: #152136;
+        border-left: 3px solid #38bdf8;
+        border-radius: 4px 12px 12px 4px;
+        padding: 20px;
+      }
+
+      .soft-skill-card h4 {
+        color: #ffffff;
+        margin-bottom: 5px;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 1px solid #1e293b;
+        font-size: 0.85rem;
+        color: #64748b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- TOP NAVIGATION -->
+      <nav>
+        <a href="#profile">Profile</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#achievements">Achievements</a>
+      </nav>
+
+      <!-- HEADER / CONTACT -->
+      <header id="profile">
+        <h1>Mathumitha M</h1>
+        <p class="profile-desc">
+          Creative B.Tech IT undergraduate skilled in content design, keyword
+          research, and social media management. Looking to leverage my
+          technical background and passion for digital marketing to deliver
+          impactful marketing campaigns and brand growth.
+        </p>
+        <div class="contact-info">
+          <span
+            >📧
+            <a href="mailto:mathumanikdeka@gmail.com"
+              >mathumanikdeka@gmail.com</a
+            ></span
+          >
+          <span>📞 +91 9791801842</span>
+          <span
+            >🔗
+            <a
+              href="https://linkedin.com/in/mathumitha-manikkam-523a2b320"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            ></span
+          >
+          <span
+            >💻
+            <a
+              href="https://github.com/MathumithaManikkam"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            ></span
+          >
+        </div>
+      </header>
+
+      <!-- TECHNICAL SKILLS -->
+      <div id="skills" class="section-title">Technical Skills</div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4>Digital Marketing & Strategy</h4>
+          <p>
+            Content Creation, Social Media Management, Market Research, Lead
+            Generation Basics.
+          </p>
+        </div>
+        <div class="skill-card">
+          <h4>SEO & Web Optimization</h4>
+          <p>
+            Basic Keyword Research, On-Page SEO Concepts, Web Content
+            Monitoring, HTML & CSS.
+          </p>
+        </div>
+        <div class="skill-card">
+          <h4>Design & Multimedia</h4>
+          <p>Canva (Design & Layouts), UI/UX Basics, Media Editing.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Analytics & Tools</h4>
+          <p>
+            Basic understanding of Google Analytics, Performance Reporting
+            Metrics.
+          </p>
+        </div>
+        <div class="skill-card">
+          <h4>Core Skills</h4>
+          <p>
+            Analytical Thinking, Written & Verbal Communication, Creative
+            Strategy, Problem Solving.
+          </p>
+        </div>
+      </div>
+
+      <!-- PROJECTS & VISUAL PORTFOLIO -->
+      <div id="projects" class="section-title">Projects & Visual Portfolio</div>
+      <div class="card" style="margin-bottom: 20px">
+        <h3 class="card-title">Visual Branding & Poster Design Campaign</h3>
+        <p style="color: #94a3b8; font-size: 0.95rem">
+          Designed modern promotional poster creatives ("INNOVATE: Shape the
+          Future Today" & Cafe Branding) using Canva. Applied clean layout
+          composition, color harmony, and visual hierarchy to deliver impactful
+          promotional designs
+        </p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <img src="Future scope.png" alt="SkillUp Academy Design" />
+          <div>
+            <span class="tag">Minimalist Design</span
+            ><span class="tag">Brand Identity</span
+            ><span class="tag">Canva</span>
+          </div>
+          <h4>INNOVATE - Brand Awareness Campaign</h4>
+          <p style="font-size: 0.9rem; color: #94a3b8">
+            Modern geometric promotional poster designed to drive brand
+            engagement and inspire forward-thinking tech solutions.
+          </p>
+        </div>
+
+        <div class="portfolio-card">
+          <img src="Rustic Coffee.png" alt="Coffee Shop Design" />
+          <div>
+            <span class="tag">F&B Brand</span><span class="tag">Canva</span
+            ><span class="tag">CTA Marketing</span>
+          </div>
+          <h4>Cozy Cafe Campaign</h4>
+          <p style="font-size: 0.9rem; color: #94a3b8">
+            Warm promotional offers (BOGO deals) to increase customer footfall.
+          </p>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div id="education" class="section-title">Education</div>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-title">B.Tech IT</div>
+          <p style="color: #ffffff; font-size: 0.9rem; margin-bottom: 8px">
+            E.G.S. Pillay Engineering College
+          </p>
+          <div class="card-meta">
+            <span>CGPA: 8.7</span>
+            <span>Expected 2027</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">HSC</div>
+          <p style="color: #ffffff; font-size: 0.9rem; margin-bottom: 8px">
+            Government Higher Secondary School
+          </p>
+          <div class="card-meta">
+            <span>Score: 75%</span>
+            <span>Passed: 2023</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">SSLC</div>
+          <p style="color: #ffffff; font-size: 0.9rem; margin-bottom: 8px">
+            Government Higher Secondary School
+          </p>
+          <div class="card-meta">
+            <span>Passed: 2021</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CERTIFICATES -->
+      <div id="certifications" class="section-title">Certificates</div>
+      <div class="card-grid">
+        <div class="card">
+          <h4 class="card-title" style="color: #38bdf8">NPTEL</h4>
+          <p style="font-size: 0.95rem">
+            Privacy and Security in Online Social Media, Introduction to Indian
+            Psychology, Affective Computing
+          </p>
+        </div>
+        <div class="card">
+          <h4 class="card-title" style="color: #38bdf8">Infosys Springboard</h4>
+          <p style="font-size: 0.95rem">
+            Web Design Basics, Ruby Full Stack Development: Introduction
+          </p>
+        </div>
+        <div class="card">
+          <h4 class="card-title" style="color: #38bdf8">Orionshift</h4>
+          <p style="font-size: 0.95rem">
+            Genius Full-Stack Development Bootcamp
+          </p>
+        </div>
+      </div>
+
+      <!-- ACHIEVEMENTS -->
+      <div id="achievements" class="section-title">Achievements</div>
+      <div class="card">
+        <div class="card-meta">
+          <span style="color: #ffffff; font-size: 1.05rem"
+            >Paper Presentation: Green-Computing Thermodynamics for Sustainable
+            IT</span
+          >
+          <span>04/2025</span>
+        </div>
+        <p style="font-size: 0.95rem">
+          Presented a paper on Green Computing Thermodynamics for Sustainable
+          IT, highlighting energy-efficient computing. The session was
+          well-received for its clarity, relevance, and innovative approach to
+          sustainable tech.
+        </p>
+      </div>
+
+      <!-- SOFT SKILLS -->
+      <div class="section-title">Soft Skills</div>
+      <div class="card-grid">
+        <div class="soft-skill-card">
+          <h4>Agile Collaboration & Teamwork</h4>
+        </div>
+        <div class="soft-skill-card">
+          <h4>Technical Communication</h4>
+        </div>
+        <div class="soft-skill-card">
+          <h4>Adaptability & Continuous Learning</h4>
+        </div>
+      </div>
+
+      <footer>&copy; 2026 Mathumitha M. All rights reserved.</footer>
+    </div>
+  </body>
+</html>
